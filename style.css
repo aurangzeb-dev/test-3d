@@ -1,0 +1,203 @@
+body{
+  background-color: rgb(12, 12, 12);
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 400px;
+
+  /* Center the container */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  padding: 20px;
+  background-color: rgb(19, 18, 18);
+  border-radius: 15px; /* Optional rounded corners */
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 5px; /* Match the container's border radius */
+  padding: 5px;  /* Adjust the width of the gradient border */
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0); /* Mask to make the gradient act like a border */
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  background-clip: border-box;
+  /* Create the animated gradient border */
+  background: linear-gradient(90deg,rgb(4, 187, 59),rgb(181, 56, 253),rgb(0, 132, 255));
+  background-size: 300% 300%;  /* Make the gradient large to see movement */
+  background-position: 0% 50%; /* Start the animation from this position */
+  animation: moveGradient 5s ease infinite; /* Animation for smooth movement */
+}
+
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.btn{
+  border-radius: 6px;
+  border: none;
+  margin: 10px;
+  height: 40px;
+  width: 90px;
+  font-size: 20px;
+  font-weight: lighter;
+}
+#time{
+color: #ffffff;
+  font-family:'Times New Roman', Times, serif ;
+  margin-bottom: 30px;
+  font-size: xx-large;
+}
+#stopbtn{
+  background-color: rgb(0, 255, 106);
+}
+#startbtn{
+  background-color: rgb(0, 132, 255);
+}
+#resetbtn{
+  background-color: rgb(181, 56, 253);
+}
+#stopbtn:hover{
+  background-color:rgb(15, 170, 80) ;
+  cursor: pointer;
+}
+#startbtn:hover{
+  background-color: rgb(13, 88, 158);
+
+  cursor: pointer;
+}
+#resetbtn:hover{
+  background-color: rgb(105, 34, 146);
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+.body{
+    background-color: rgb(12, 12, 12);
+}
+
+.container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 340px;
+  
+    /* Center the container */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    padding: 20px;
+    background-color: rgb(19, 18, 18);
+    border-radius: 15px; /* Optional rounded corners */
+  }
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 5px; /* Match the container's border radius */
+    padding: 5px;  /* Adjust the width of the gradient border */
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0); /* Mask to make the gradient act like a border */
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    background-clip: border-box;
+    /* Create the animated gradient border */
+    background: linear-gradient(90deg,rgb(4, 187, 59),rgb(181, 56, 253),rgb(0, 132, 255));
+    background-size: 300% 300%;  /* Make the gradient large to see movement */
+    background-position: 0% 50%; /* Start the animation from this position */
+    animation: moveGradient 5s ease infinite; /* Animation for smooth movement */
+  }
+  
+ 
+@keyframes moveGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+.btn{
+    border-radius: 6px;
+    border: none;
+    margin: 10px;
+    height: 40px;
+    width: 90px;
+    font-size: 20px;
+    font-weight: lighter;
+  }
+#time{
+  color: #ffffff;
+    font-family:'Times New Roman', Times, serif ;
+    margin-bottom: 30px;
+    font-size: xx-large;
+  }
+#stopbtn{
+    background-color: rgb(0, 255, 106);
+}
+#startbtn{
+    background-color: rgb(0, 132, 255);
+}
+#resetbtn{
+    background-color: rgb(181, 56, 253);
+}
+#stopbtn:hover{
+    background-color:rgb(15, 170, 80) ;
+    cursor: pointer;
+}
+#startbtn:hover{
+    background-color: rgb(13, 88, 158);
+
+    cursor: pointer;
+}
+#resetbtn:hover{
+    background-color: rgb(105, 34, 146);
+    cursor: pointer;
+  
+}
+}
